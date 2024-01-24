@@ -2,10 +2,10 @@
 // VISTA PARA LA LISTA DE LIBROS
 
 // Recuperamos la lista de libros
-$listaTarea = $data["listaLibros"];
+$listaTarea = $data["listaTarea"];
 
 echo "<form action='index.php'>
-        <input type='hidden' name='action' value='buscarLibros'>
+        <input type='hidden' name='action' value='buscarTarea'>
         <input type='text' name='textoBusqueda'>
         <input type='submit' value='Buscar'>
       </form><br>";
@@ -19,10 +19,10 @@ if (count($listaTarea) == 0) {
     echo "<tr>";
     echo "<td>" . $fila->titulo . "</td>";
     echo "<td>" . $fila->descripcion . "</td>";
-    echo "<td><a href='index.php?action=formularioModificarLibro&idLibro=" . $fila->idLibro . "'>Modificar</a></td>";
-    echo "<td><a href='index.php?action=borrarLibro&idLibro=" . $fila->idLibro . "'>Borrar</a></td>";
+    echo "<td><a href='index.php?action=formularioModificarTarea&idTarea=" . $fila->idTarea . "'>Modificar</a></td>";
+    echo "<td><a href='index.php?action=borrarTarea&idTarea=" . $fila->idTarea . "'>Borrar</a></td>";
     echo "</tr>";
   }
   echo "</table>";
 }
-echo "<p><a href='index.php?action=formularioInsertarLibros'>Nuevo</a></p>";
+echo "<p><a href='index.php?action=formularioInsertarTarea'>Nuevo</a></p>";
